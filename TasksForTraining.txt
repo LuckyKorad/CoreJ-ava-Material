@@ -1,0 +1,85 @@
+ Sample assignments:
+
+1)Create a class like student....Take four properties and some behaviours inside the student class.
+Two properties and one behaviour must be not be accessed by the outside world.
+
+
+2)Write a program that includes both single and hierarchical inheritence.
+
+Like:
+A is Parent.B is child of A.C and D are children of B.
+
+3)Write a program that involves both the concepts like overloading and overriding.(Reflect both the 
+concepts in the same program).
+
+
+Create a class like "Employee".Create sub classes like FullTime and PartTime under it.Under PartTime
+Create two subclasses like HourlyBased and Contract based.The parent classes "Employee" and "PartTime"
+should have an abstract method like "salary()".The body for these abstract methods should be provided
+by the child classes(FullTime,Hourly based,Contract based).
+
+
+Create a class that have overloaded constructors that is going calculate the area of circle with
+different parameters.Every constructor should involve "this" keyword.
+
+Create three packages.Reuse the classes of one package into another package.
+
+Create a stack and perform different operations like push(),pop(),peek(),search(),etc.
+
+Create three threads.Two by extending "Thread" class and one that implements Runnable interface.
+First thread should print odd nos. from 0 to 10.
+Second thread should print even nos. from 0 to 10.
+Third thread should print Hello.
+All the three threads should run simultaneously and should do their respective tasks by maintaining
+3 seconds pause.
+
+Write a program that includes the following annotations...
+@Override
+@SuppressWarnings
+@Deprecated
+
+
+Create a registration form that should accept
+Name
+Username
+Password
+Confirm Password
+Address
+Gender
+Languages known
+Choose city
+Choose File option
+lastly,two buttons like "Register" and "Clear".
+
+Create an Employee class.The database should contain a table named "EmployeeTab".
+Add some data to the employeeTab.
+Let us consider a record with empNo:104 empName:John empAdd:UK
+Now accept empName and empAdd from the user and update this record(empNo:104)
+with the newly accepted values.
+
+
+To check the current bill to be paid...
+Create a login form.Create a "new user?register" link in that page.If the user
+clicks on that link,he should go to the registration form.Take the details in registration form and
+store in the database.Validate the login credentials like userid and password at the time of login.
+After the user logs in,the user should see a form with the text field like
+No. of. units consumed:
+and he should see a button like "Generete Bill".If he click on that button,he should see a page like:
+Name:John
+Bill to be paid:4000.
+
+
+Create a page that have four text fields like empNo,empName,empsal,empDesignation.
+Buttons like insert,update,delete,view,view all,clear.
+If the 	user fills the details in the text boxs and click on insert button,they have to be inserted 
+into the database.If the user give empNo and click on delete,that record should be deleted from
+the database.Similarly,if the user gives empNo and enters new values for empName,empsal,empDesignation
+and click on update button, they should be updated in the data base.
+If the user enter empNo and click on view button,they have to view the remaining details in the text
+fields.If the user click on view all button,he should view all the details of the employees.
+Write <jsp:forward> standard action and write the logic for view button in some other JSP page.
+
+
+
+
+

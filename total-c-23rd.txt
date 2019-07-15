@@ -1,0 +1,1979 @@
+C was introduced by Dennis Ritche in1972 at AT & T Bell laboratories
+of USA.
+============Data types==================
+DataType          size      range                   FormatString
+char                      1       -128 to 127                    %c
+unsigned char    1      0 to 255                         %c
+short or int          2       -32768 to32767            %i or %d
+unsigned int       2      0 to 65535                       %u
+long                     4       -2147483648
+                                                 to
+                                        2147483647                 %ld
+unsigned long   4         0 to 4294967295           %lu
+float                     4          3.4e-38 to 3.4e+38      %f or %g
+double                8           1.7e-308 to 1.7e+308   %lf
+
+long double        10         3.4e-4932 to1.1e+4932   %lf
+===============Steps to write program===========
+1)Include the header files.
+2)Declare the variables and----
+                                  (i)Initialize them or
+                                  (ii)Take the input from the user.
+3)Perform the logic.
+4)Store the result in some variable.                                              
+5)Display the result.
+
+============Basic C program==============
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+int a,b,c;
+clrscr();
+a=10;
+b=20;
+c=a+b;
+printf("%d",c);
+getch();
+}
+
+
+==============
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+int a,b,c;
+clrscr();
+/*
+a=10;
+b=20;
+*/
+printf("Enter the values:");
+scanf("%d%d",&a,&b);
+
+c=a+b;
+printf("%d",c);
+getch();
+}
+
+=========Square===========
+void main()
+{
+int a;
+float result;
+printf("Enter a value:");//5
+scanf("%d",&a);
+result=a*a;
+printf("%f",result);
+getch();
+}
+======Explanation================
+#include<stdio.h>
+#include<conio.h>
+
+.h------------>Header file
+These are also known as libraries(Preprocessor directives).
+The code for the keywords will be taken from the header files and
+pasted in the appropriate place.All the codes are pre
+{
+---------
+---------            --------------->Block
+---------
+}
+main()----->Program Execution will be started from main().
+void----->main block is not going to return anything.
+clrscr()----->To display only the current programs output.
+printf()------>To display anything on to the monitor.
+getch()----->To display output on to the monitor without using ALT+F5.
+(Bluffing the computer)
+/*   */-------->Comments----They will not be compiled by the compiler.
+;------------>To terminate the current line.
+
+
+============OPERATORS================
+Operator                          Representation
+Arithmetic                          +  -   * / %
+Relational                            > <  ==   >=   <=   !=
+Logical                                &&   ||    !
+Increment/Decrementation    ++      --
+Assignment                                =
+Bitwise                                    &  |  ^ >> << ~
+comma                                           ,
+
+conditional
+or ternary                                      ?:
+
+function                                         ()
+array                                              [ ]
+structure operator                         ->
+pointer                                            *
+address                                         &
+sizeof                                           sizeof(parameter)
+      
+
+
+
+
+
+
+======ternary=========
+void main()
+{
+
+printf("Result=%d",2==3?4:5);
+
+}
+
+
+===========postfix notation(i++)====
+void main()
+{
+
+int a,z,x=10,y=20;
+z=x*y++;
+a=x*y;
+printf("%d%d",z,a);
+}
+output:
+200 210
+===========prefix notation======
+void main()
+{
+
+int a,z,x=10,y=20;
+z=x*++y;
+a=x*y;
+printf("%d%d",z,a);
+}
+output:
+210 210
+=======sizeof and address operators==
+void main()
+{
+int x=12;
+float y=2.2;
+printf("size of x=%d",sizeof(x));
+printf("size of y=%f",sizeof(y));
+
+printf("Address of x=%u and y=%u",&x,&y);
+getch();
+}
+=======Logical operators========
+
+void main()
+{
+
+printf("5>3 && 5<10:%d",5>3&&5<10);
+printf("8>5 || 8<2:%5d",8>5||8<2);
+
+}
+
+
+=============ASCII================
+American standard code for information interchange
+A-Z---->65 to 90
+a-z---->97-122
+0-9---->48-57
+
+void main()
+{
+char x;
+int y;
+printf("Enter a character:");//D
+scanf("%c",&x);
+
+y=((x>=65 && x<=90)?1:0);
+printf("y=%d",y);
+
+}
+===============Type Casting===============
+Converting one data type into another data type.
+printf("%d",5/2);------------->2(Loss of precision)
+printf("%f",(float)5/2);
+
+printf("%c",(char)65);------------->A
+
+========Instuctions==========
+
+
+Types:
+
+Arithmetic ---->
+Those instructions that involves arithmetic operators are called as arithmetic instructions.
+
+Example:
+d=a*b+c;
+
+Type declaration----> int a;
+
+Control---->Sequence control
+             ---->Decision control
+                                                  --->if
+                                                 --->if-else
+                                                 --->if-else ladder
+           ---->Loop control-
+                                                 -->for
+                                                --->while
+                                               --->do-while
+       ---->Case control(switch)
+
+
+-----------
+-----------
+-------------
+-------------
+
+if(codition)
+{
+-----------
+-----------
+}
+------------
+-------------
+
+void main()
+{
+int a=34,b=3;
+
+if(a==b)
+{
+printf("They are equal");
+}
+prinf("Iam the last");
+getch();
+}
+
+if(condition)
+{
+------
+------
+}
+else
+{
+------
+------
+------
+}
+
+void main()
+{
+int a,b;
+printf("Enter the values of a and b:");
+/* 5 5*/
+scanf("%d%d",&a,&b);
+if(a==b)
+{
+printf("They are equal");
+
+}
+else
+{
+printf("They are not equal");
+}
+prinf("I am the last");
+getch();
+}
+
+if-else-ladder
+
+if(condition)
+{
+
+}
+else if(condition)
+{
+
+}
+else if(condition)
+{
+
+}
+
+else if(condition)
+{
+
+}
+
+else
+{
+
+}
+
+Example:
+
+void main()
+{
+int rno;
+int m1,m2,m3;
+float tot,avg;
+printf("Enter the roll no.");
+scanf("%d",&rno);//101
+
+printf("Enter the marks in three subjects");
+scanf("%d%d%d",&m1,&m2,&m3);//77 65 88
+
+tot=m1+m2+m3;//190
+avg=tot/3.0;//56
+
+printf("Your roll no is %d",rno);
+printf("Marks in the first subject %d",m1);
+printf("Marks in the second subject %d",m2);
+printf("Marks in the third subject %d",m3);
+printf("Total marks %f",tot);
+printf("Average %f",avg);
+
+if(avg>=90)
+{
+printf("Grade A");
+}
+else if(avg>=75)
+{
+printf("Grade B");
+}
+else if(avg>=60)
+{
+printf("Grade C");
+}
+else if(avg>=40)
+{
+printf("Grade D");
+}
+else
+{
+printf("Failed---Waste fellow");
+}
+getch();
+}
+Nested if:
+if(condtion)
+{
+---------
+---------
+---------
+       if(condition)
+       {
+       
+                 ---------------
+                -------------------- 
+
+         }
+      else
+        {
+
+       --------------
+       --------------
+
+        }
+    ----------------------
+     ----------------------
+
+
+}
+else
+{
+----------------
+----------------
+----------------
+
+}
+
+
+===============Loops==============
+If you want to repeatedly execute a set 
+of statements,you can use loops.
+=======for===========
+
+for(initialization;condition;increntation/
+                             decrementation)
+{
+-----
+-----
+}
+
+Example:
+void main()
+{
+int i;
+for(i=1;i<=5;i++)
+{
+printf("Hello");
+}
+getch();
+}
+
+======Upto the number entered by the user====
+void main()
+{
+int i,n;
+
+printf("Enter the value:");
+scanf("%d",&n);
+
+for(i=0;i<=n;i++)
+{
+printf("%d",i);
+}
+getch();
+                        
+}
+
+===================
+void main()
+{
+int i,a,b;
+int a,b,i;
+for(i=1;i<=3;i++)
+{
+printf("Enter a no.");
+scanf("%d",&a);
+b=a*a;
+printf("%d",b);
+}
+getch();
+}
+
+
+=====Decrementation==========
+for(i=10;i>=0;i--)
+{
+printf("%d",i);
+}
+output:
+10 9 8 7 6......0
+========while======
+initialization;
+while(condition)
+{
+---
+---
+incremetation;
+}
+
+Example:
+void main()
+{
+int i=1;
+while(i<=5)
+{
+printf("%d",i);
+i++;
+}
+}
+=======do-while========
+initialization;
+do
+{
+-----
+-----
+incre/decre;
+}while(condition);
+
+void main()
+{
+int i=1;
+do
+{
+printf("%d",i);
+i++;
+}while(i<=5);
+
+getch();
+
+}
+
+=========break===============
+As soon as the cursor encounter the break
+keyword,it will skip all the statements
+after "break" and exits(comes out) of that
+block in which break is written.
+for(i;c;i)
+{
+-----
+-----
+----
+-----
+
+if(condition)
+{
+continue;
+
+}
+-----
+----
+-----
+}
+-----
+-----
+continue:
+As soon as the cursor encounter the continue
+keyword,it will skip all the statements 
+after continue and it will directly be
+going to the 4th part(incrementation)
+of the loop.
+
+=========goto============
+------
+------
+------
+goto label-name;
+-------
+-------
+-------
+label-name:
+-------
+-------
+-------
+
+void main()
+{
+int n;
+printf("Enter a number");
+scanf("%d",&n);
+if(n%2==0)
+{
+goto even;
+}
+else
+{
+goto odd;
+}
+
+odd:
+printf("The number is odd");
+
+even:
+printf("The number is even");
+
+getch();
+}
+
+=========Nested loops========
+main()
+{
+int r,c,sum;
+for(r=1;r<=3;r++)
+{
+for(c=1;c<=2;c++)
+{
+sum=r+c;
+printf("r=%d c=%d sum=%d",r,c,sum);
+}
+}
+getch();
+}
+
+====Case Control instructions(switch)====
+
+switch(variable)
+{
+
+case case-name:
+--------
+--------
+--------
+break;
+
+case 2:
+--------
+--------
+--------
+break;
+
+case 3:
+--------
+--------
+--------
+break;
+
+default:
+--------
+--------
+--------
+}
+
+Example:
+void main()
+{
+int dayno;
+printf("Enter the day number:");
+scanf("%d",&dayno);//4
+
+switch(dayno)
+{
+case '1':
+printf("Sunday");
+break;
+
+case 2:
+printf("Monday");
+break;
+
+case 3:
+printf("Tuesday");
+break;
+
+case 4:
+printf("wednesday");
+break;
+
+default:
+printf("Invaid dayno");
+}
+getch();
+}
+
+char ch;
+5 7
+pf("Enter + for addtion");
+printf("Enter your choice");
+scanf("%c",&ch);
+switch(ch)
+
+{
+
+case '+':
+
+c=a+b;
+
+
+
+}
+
+=======C logics=========
+www.programmingsimplified.com
+===swap two numbers using a temporary
+variable=====
+
+temp=x;
+x=y;
+y=temp;
+====swap two numbers without using 
+a temporary variable====
+
+a=a+b;
+b=a-b;
+a=a-b;
+
+===Febonicci series upto the given no==
+
+void main()
+{
+int t1=0,t2=1,disp=0,num;
+clrscr();
+printf("Enter a number:");
+scanf("%d",&num);
+
+printf("Feb series:%d%5d",t1,t2);
+disp=t1+t2;
+
+while(disp<=num)
+{
+printf("%5d",disp);
+t1=t2;
+t2=disp;
+disp=t1+t2;
+
+}
+getch();
+}
+
+=======Sum of the digits========
+void main()
+{
+int n,sum=0,rem,temp;
+printf("Enter a number:");
+scanf("%d",&n);
+
+temp=n;
+while(temp!=0)
+{
+rem=temp%10;
+sum=sum+rem;
+temp=temp/10;
+}
+printf("sum=%d",sum);
+getch();
+
+
+}
+======Amstrong number=======
+153
+void main()
+{
+int n,sum=0,rem,temp;
+printf("Enter a number:");
+scanf("%d",&n);
+
+temp=n;
+while(temp!=0)
+{
+rem=temp%10;
+sum=sum+rem*rem*rem;
+temp=temp/10;
+}
+if(sum==n)
+{
+printf("yes");
+}
+else
+{
+printf("no");
+}
+getch();
+}
+=====Perfect number=========
+6
+1,2,3,6
+void main()
+{
+int n,i=1,sum=0;
+printf("Enter a number:");
+scanf("%d",&n);
+
+while(i<n)
+{
+if(n%i==0)
+{
+sum=sum+i;
+}
+i++;
+}
+
+if(sum==n)
+{
+printf("Yes");
+}
+else
+{
+printf("No");
+}
+getch();
+}
+  
+=====Factorial===========
+5!
+5*4*3*2*1=120
+
+void main()
+{
+
+int c,fact=1,n=5;
+for(c=1;c<=n;c++)
+{
+fact=fact*c;
+}
+printf("%d",fact);
+getch();           
+}
+=======Prime===========
+void main()
+{
+int num,i;
+printf("Enter a number:");
+scanf("%d",&num);
+
+for(i=2;i<num;i++)
+{
+if(num%i==0)
+{
+printf("Not prime");
+goto out;
+}
+}
+printf("%d is prime",n);
+out:
+getch();
+}
+
+=======Program to reverse a no.===
+void main()
+{
+int a,sum=0,n;
+printf("Enter a number:");
+scanf("%d",&n);
+while(n>0)
+{
+sum=sum*10;
+a=n%10;
+n=n/10;
+sum=sum+a;
+}
+/*printf("Reverse=%d",sum);*/
+if(n==sum)
+{
+printf("Yes");
+}
+else
+{
+printf("No");
+}
+getch();
+}
+Let n=623
+sum   a    n    sum
+0     3    62    3  
+30    2     6    32
+320   6     0    326
+
+======To print prime nos. between 
+the given range=============
+void main()
+{
+int i,n,m,count;
+printf("Enter the range:");
+scanf("%d%d",&m,&n);
+
+for(i=m;i<=n;i++)
+{
+count=0;
+for(j=2;j<i;j++)
+{
+if(i%j==0)
+{
+count++;
+}
+if(count==0)
+{
+printf("%d",i);
+}
+}
+}
+getch();
+}
+==========Arrays=============
+An array is a collection of homogeneous or similar datatype elements sharing a common name.
+
+Syntax:
+datatype arrayname[size];
+
+Example:
+int a[10];
+
+void main()
+{
+int a[10];
+int i,n;
+printf("Enter the no. of. elements you want to put into the array:");//5
+scanf("%d",&n);
+
+for(i=0;i<n;i++)
+{
+printf("Enter the value:");
+scanf("%d",&a[i]);
+}
+
+printf("The array elements are:");
+for(i=0;i<n;i++)
+{
+printf("%d",a[i]);
+}
+getch();
+}
+=====Example2======
+void main()
+{
+int avg,sum=0;
+int i;
+int marks[30];
+for(i=0;i<=29;i++)
+{
+printf("Enter the marks:");
+scanf("%d",&marks[i]);
+}
+for(i=0;i<=29;i++)
+{
+sum=sum+marks[i];
+}
+avg=sum/30;
+printf("Average marks:%d",avg);
+getch();
+}
+
+int a;
+a=2;
+int a=2;
+int a[]={2,3,4,7,8,9};
+
+======2D Arrays========
+void main()
+{
+int stud[4][2];
+int i;
+for(i=0;i<=3;i++)
+{
+printf("Enter the roll no. and marks:");
+scanf("%d%d",&stud[i][0],stud[i][1]);
+}
+
+for(i=0;i<=3;i++)
+{
+printf("%d%d",stud[i][0],stud[i][1]);
+}
+getch();
+}
+======Matrix Addition==================
+void main()
+{
+int i,j,r1,c1,a[10][10],b[10][10];
+printf("Enter the order of the matrices upto 10*10");
+scanf("%d%d",&r1,&c1);
+
+printf("Enter the elements of the matrix A:");
+for(i=0;i<r1;i++)
+{
+   for(j=0;j<c1;j++)
+    {
+      scanf("%d",&a[i][j]);
+    }
+}
+printf("Enter the elements of the matrix B:");
+for(i=0;i<r1;i++)
+{
+   for(j=0;j<c1;j++)
+    {
+      scanf("%d",&b[i][j]);
+    }
+}
+printf("Matrix Addtion:");
+for(i=0;i<r1;i++)
+{
+   for(j=0;j<c1;j++)
+    {
+    printf("%5d",a[i][j]+b[i][j]);
+    }
+ printf("\n");
+}
+getch();
+}
+
+int a[]={1,4,5,6,7};
+char name[]={'p','i','n','k','y'};
+char name[]="pinky"
+=====program to print a string========
+void main()
+{
+char name[ ]="pinky";
+int i=0;
+while(name[i]!='\0')
+{
+printf("%c",name[i]);
+i++;
+}
+getch();
+}
+=======Direct printing of a string=======
+void main()
+{
+char name[]="Pinky";
+printf("%s",name);
+getch();
+}
+=======gets(),puts()=========
+void main()
+{
+char name[25];
+printf("Enter your full name");
+gets(name);
+puts("hello");
+puts(name);
+getch();
+}
+=======Standard library functions=============
+#include<string.h>
+strlen()--->To find the length of a string
+strcpy()--->To copy the contents of one  srting
+into another string 
+strcmp()--->To compare the contents of two strings.
+strcat()--->Concatenates the source string at the end of the target string.
+=========strcpy()==========
+void main()
+{
+char source[]="hello";
+char target[20];
+strcpy(target,source);
+printf("Source string=%s",source);
+printf("Target string=%s",target);
+getch();
+}
+=========strlen()===========
+void main()
+{
+char arr[]="bamboozled";
+int len1,len2;
+len1=strlen(arr);
+len2=strlen("Humpty Dumpty");
+printf("%d%d",len1,len2);
+getch();
+}
+===========strcat()===============
+void main()
+{
+char source[]="Folks!";
+char target[30]="Hello";
+strcat(target,source);
+printf("Source string:%s",source);
+printf("Target string:%s",target);
+getch();
+}
+Folks!
+HelloFolks!
+========strcmp()===============
+void main()
+{
+char string1[]="Jerry";
+char string2[]="Ferry";
+int i,j,k;
+i=strcmp(string1,"Jerry");
+j=strcmp(string1,string2);
+k=strcmp(string1,"Jerryboy");
+printf("%d%d%d",i,j,k);
+getch();
+}
+
+=======================Functions===========
+A function is a self contained block 
+of statements that can be used any no. of.
+times any where in the program.
+ 3 parts:
+1)Function definition
+2)Function call
+3)Function Declaration
+
+void main()
+{
+void italy();
+void brazil();
+void argentina();
+printf("I am finally back to main()");
+italy();
+printf("I am finally back to italy()");
+getch();
+}
+void italy()
+{
+printf("I am in Italy");
+brazil();
+
+}
+=====================Example2==================
+void main()
+{
+void italy();
+void brazil();
+void argentina();
+
+printf("Hello from main");
+italy();
+printf("I have executed Italy");
+brazil();
+printf("I have executed Brazil");
+argentina();
+printf("I have executed argentina");
+printf("Ok.....Byeeeee");
+getch();
+}
+void italy()
+{
+printf("I am in Italy");
+/*brazil();WE can give fn. calls not only 
+with in the main(),but also in the 
+fn.definition*/
+}
+
+void brazil()
+{
+printf("I am in Brazil");
+}
+
+void argentina()
+{
+printf("I am in Argentina");
+}
+
+======Parameter passing techniques to a function===
+3 types:
+1)Call by value
+2)Call by reference
+3)Function recursion
+
+=========Call by value=========
+
+int calsum(int x,int y,int z);
+void main()
+{
+int a,b,c,sum;
+printf("Enter the values:");//1,2,3
+scanf("%d%d%d",&a,&b,&c);
+sum=calsum(a,b,c);
+printf("The sum is %d",sum);
+getch();
+}
+int calsum(int x,int y,int z)
+{
+int w;
+w=x+y+z;
+return w;
+}
+===========To calculate the square of the given no.
+call by value technique==============
+
+float square(float x);
+void main()
+{
+float a,b;
+printf("Enter a no.");//5
+scanf("%f",&a);
+b=square(a);
+printf("The square of the given no. is %f",b);
+getch();
+}
+
+float square(float x)
+{
+float y;
+y=x*x;
+return y;
+}
+===========Call by reference===================
+In this technique,addresses(of variables) will be passed to the function definitions.
+=========To swap two values=============
+void main()
+{
+int a,b;
+printf("Enter the values of  a nd b");//5,6
+scanf("%d%d",&a,&b);
+swap(&a,&b);
+printf("Bye");
+getch();
+}
+void swap(int *x,int *y)
+{
+int temp;
+temp=*x;
+*x=*y;
+*y=temp;
+printf("Values after swapping:%d%d",x,y);
+}
+	
+==========Function recursion=========
+int rec(int );
+void main()
+{
+int a,fact;
+printf("Enter a number:");
+scanf("%d",&a);
+fact=rec(a);
+printf("Factorial value:%d",fact);
+getch();
+}
+int rec(int x)
+{
+int f;
+if(x==1)
+return 1;
+else
+return x*rec(x-1);/*Function recursion*/
+}
+}
+==============typedef=====
+Used to create alternate name for the data type.
+typedef int cat;
+Now,
+int a,b is similar to cat a,b; 
+=======Macros===============
+Used to put alternate name for anything like symbols,etc.
+=======Example1=========
+#include<stdio.h>
+#include<conio.h>
+#define AND &&
+#define OR ||
+#define pf printf
+void main()
+{
+int f=1,x=4,y=90;
+if((f<5) AND (x<=20) OR y<=45)
+pf("Ok fine");
+else
+pf("Not ok");
+getch();
+}
+ ==========Example2=============
+#include<stdio.h>
+#include<conio.h>
+
+#define FOUND printf("The virus");
+void main()
+{
+char signature='y';
+if(signature=='y')
+FOUND
+else
+printf("Safe");
+getch();
+}
+=========Differences between typedef and macros==============
+1)typedef is used to put aliases only for the datatypes.
+2)Macros are pre compiled .
+==========Cpreprocessor=================
+.c (hello.c)file will first go to the C-Preprocessor where macro expansion will be taken place.
+This macro expanded code will be saved with the extension "i"(hello.i) and will be sent to the compiler for compilation.
+==============Storage classes=============
+static
+auto 
+extern 
+register
+
+/*int a;*/
+a=10;
+int a=10;
+auto int a=10;
+
+int a=10;
+
+int calsum(int x,int y int z)
+{
+auto int w;
+w=x+y+z;
+return w;
+}
+
+
+
+void main()
+{
+extern int a,b,c;
+calsum(a,b,c);
+}
+int i;
+for(i=0;i<=30;i++)
+{
+
+}
+
+int i;
+printf("%d",i);
+
+For a variable to work,it should have both data type and storage class.
+Data type have to be specified by the programmer and storage class
+will implicitly be putting by the compiler.
+
+Strorage class determines-
+
+1)Location where the variable would be stored.
+memory,cpu registers(faster accesss)
+2)What will be initial value of the variable,if the initial
+value is not assigned to it.
+3)Scope of the variable.
+4)Life time of the variable.
+
+
+                     auto        extern     static     register             
+storage       memory  memory memory CPU register
+
+default      garbage    0               0            garbage value 
+initial 
+value  
+                  
+scope        Local       Global       Local         Local          
+                   to the                         to the
+                   block                         block
+ 
+life time     
+
+================enum===================
+It is used for declaring enumerated types.
+The programmer can create his own datatype and 
+define the values of the variables.
+The values in the enum are the constant unsigned integers.
+void main()
+{
+enum month{Jan,Feb,Mar,April,May,Dec};
+clrscr();
+printf("Jan=%d",Jan);
+printf("Feb=%d",Feb);
+printf("May=%d",May);
+printf("Dec=%d",Dec);
+getch();
+}
+output:
+Jan=0
+
+Allowable
+enum month{Jan=1,Feb,Mar,April,May,Dec};
+=========Command Lines Arguments========
+Arguments that are passed in the same line where execution command is given are called as command line arguments.
+==========hello.c===============
+#include<stdlib.h>
+void main(int argc,char *argv[])
+{
+int i;
+printf("Total no. of. arguments:%d",argc);
+for(i=0;i<argc;i++)
+{
+printf("%s\n",argv[i]);
+}
+
+getch();
+}
+Execution:
+Always,the file name will be considered as
+an argument and it will be stored in argv[0].
+1)alt+f9
+2)ctrl+f9
+3)Open the DOS shell
+Now the cursor will point out to...
+c:\TC:\BIN>
+Now,Type....
+cd ..
+cd source
+Now the cursor will point out to...
+c:\TC:\source>
+Now type
+hello.exe a b c
+The output for the above program is
+Total no. of. arguments:4
+hello.exe
+a
+b
+c
+We can pass any values.
+What ever we pass to argv[],they are
+considered as strings(since char *argv[]).
+So if we pass 100 200 300 as arguments and
+if we want to perform sum,the result is 0
+because 100 200 and 300 are treated as 
+strings and hence sum cannot be performed on
+them.So we have atoi(),which converts string
+to an integer.Now we can perform sum.
+Similarly atof() is used to convert string 
+to a float value. 
+==============atoi()================
+======hello.c========
+#include<stdlib.h>
+void main(int argc,char *argv[])
+{
+int i;
+float sum=0;
+
+printf("No. of. args:%d",argc);
+/*
+We have to start loop from 1 because
+from argv[1] onwards,we are having the values
+*/
+for(i=1;i<argc;i++)
+{
+printf("%s\n",argv[i]);
+sum=sum+atoi(argv[i]);
+}
+printf("sum=%f",sum);
+
+getch();
+}
+
+hello.exe 100 200 300
+
+No. of arguments=4
+hello.exe
+100
+200
+300
+sum=600
+==============atof()================
+======hello.c========
+#include<stdlib.h>
+void main(int argc,char *argv)
+{
+
+int i;
+float sum=0;
+
+printf("No. of. args:%d",argc);
+
+for(i=1;i<argc;i++)
+{
+printf("%s\n",argv[i]);
+sum=sum+atof(argv[i]);
+}
+printf("sum=%f",sum);
+
+getch();
+}
+
+hello.exe 10.1 20.2 30.3
+
+No. of arguments=4
+hello.exe
+10.1
+20.2
+30.3
+sum=60.6
+=============structures=================
+Structure is a collection of hetrogeneous/dissimilar datatype elements.
+struct employee
+{
+int empno;`
+char empname[20];
+float salary;
+};
+
+void main()
+{
+struct employee e;
+printf("Enter the empno:");//101
+scanf("%d",&e.empno);
+
+printf("Enter the emp name:");
+scanf("%s",e.empname);
+
+printf("Enter the emp salary:");
+scanf("%f",&e.salary);//20000
+
+printf("%d%s%f",e.empno,e.empname,e.salary);
+
+getch();
+}
+
+
+============To initialize a structure======
+void main()
+{
+
+struct book1
+{
+char book[30];
+int pages;
+float price;
+};
+
+struct book1 bk1={"c++",300,255};
+
+printf("Book name:%s",bk1.book);
+printf("No of pages:%d",bk1.pages);
+printf("Book price:%f",bk1.price);
+getch();
+}
+============Program to display the size====
+void main()
+{
+
+struct book1
+{
+char book[30];
+int pages;
+float price;
+};
+
+struct book1 bk1;
+
+printf("Size of the structure elements:");
+
+printf("Book:%d",sizeof(bk1.book));
+printf("No of pages:%d",sizeof(bk1.pages));
+printf("Price:%d",sizeof(bk1.price));
+
+printf("Size of the total structure:%d",sizeof(bk1));
+
+getch();
+}
+
+=======Nested structures==============
+void main()
+{
+
+struct name
+{
+char first[10];
+char second[10];
+char last[10];
+};
+
+struct bdate
+{
+int day;
+int month;
+int year;
+};
+
+struct data
+{
+struct name nm;
+struct bdate bt;
+};
+
+struct data r1;
+
+printf("Enter the Name(first/second/last)");
+scanf("%s%s%s",r1.nm.first,r1.nm.second,r1,nm.last);
+
+printf("Enter the Birth date(day/month/year");
+scanf("%d%d%d",&r1.bt.day,&r1.bt.month,&r1.bt.year);
+
+printf("Name:%s%s%s",r1.nm.first,r1.nm.second,r1.nm.last);
+printf("DOB:%d%d%d",r1.bt.day,r1.bt.month,r1.bt.year);
+
+getch();
+}
+
+==========Pointer to structure==========
+void main()
+{
+
+struct book
+{
+char name[25];
+char author[25];
+int pages;
+};
+
+
+struct book bk1={"Java Complete Reference","P.Balaguru Swamy",886};
+
+struct book *ptr;
+
+ptr=&bk1;
+
+printf("%s by %s of %d pages",bk1.name,bk1.author,bk1.pages);
+printf("%s by %s of %d pages",ptr->name,ptr->author,ptr->pages);
+
+getch();
+}
+
+
+=======Anonymous structure============
+Structure without name is called as an anonymous structure.
+struct 
+{
+int age;
+float salary;
+}e;
+
+struct employee e;
+
+==========unions===================
+In order to efficiently make use of memory,
+we use unions.
+
+struct employee
+{
+int age;
+float salary;
+
+}e;
+
+union student
+{
+int age;
+float marks;
+char grade;
+}s;
+
+sizeof(e);----->6
+sizeof(s);----->4
+
+
+=========Files==================
+A file is a collection of information.
+
+Operations on a file:
+
+Creating a new file
+Opening the existing file
+Reading a file
+Writing to a file
+Moving to a specific location in a file(Seeking).
+Closing a file
+
+/*
+1 pinky vskp 98
+
+db
+
+select * from student where marks>=90;
+
+*/
+
+===========FileCopy====================
+void main()
+{
+
+FILE *fs,*ft;
+char ch;
+
+
+fs=fopen("pr1.txt","r");
+
+if(fs==NULL)
+{
+puts("Cannot open the source");
+exit(1);
+}
+
+ft=fopen("pr2.txt","w");
+
+if(ft==NULL)
+{
+puts("cannot open the target file");
+fclose(fs);
+exit(2);
+}
+
+while(1)
+{
+ch=fgetc(fs);
+
+if(ch==EOF)
+break;
+
+else
+fputc(ch,ft);
+
+}
+
+fclose(fs);
+fclose(ft);
+
+getch();
+}
+
+
+fgets() and fputs() are the functions whhich are capable 
+of copying strings directly.
+But the problem with fgets() and fputs() 
+is..what ever we do give..it will be taking them as 
+strings.
+
+So,fprintf() and fscanf() functions came.They will be 
+considering the data as it is.
+
+In order to efficiently use the memory,we do use
+fread() and fwrite() functions.
+
+=====Program that receives records from the keyboard and
+writes them to a file in the binary mode==========
+/*program on fwrite()*/
+#include<stdio.h>
+#include<stdlib.h>
+
+void main()
+{
+
+FILE *fp;
+char another='y';
+
+struct emp
+{
+char name[10];
+int age;
+float bs;
+};
+
+struct emp e;
+
+fp=fopen("EMP.DAT","wb");
+
+if(fp==NULL)
+{
+puts("cannot open the file");
+exit(1);
+}
+
+while(another=='y')
+{
+
+printf("Enter the name,age and basic salary:");
+scanf("%s%d%f",e.name,&e.age,&e.bs);
+fwrite(&e,sizeof(e),1,fp);
+printf("Add another record(y/n)");--->n
+another=getche();
+
+}
+
+fclose(fp);
+
+getch();
+
+}
+
+pinky 27  20000
+
+sweety 29 30000
+
+==========Reads records from the binary file and displays 
+on VDU=======
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void main()
+{
+
+FILE *fp;
+
+
+struct emp
+{
+char name[10];
+int age;
+float bs;
+};
+
+struct emp e;
+
+fp=fopen("EMP.DAT","rb");
+
+if(fp==NULL)
+{
+puts("cannot open the file");
+exit(1);
+}
+
+while(fread(&e,sizeof(e),1,fp)==1)
+{
+printf("%s%d%f",e.name,e.age,e.bs);
+}
+
+fclose(fp);
+
+getch();
+}
+=========================================
+fghgjhkjkljilkjlllllllllllllllll
+rewind(fp);
+
+ftell(fp)
+
+fseek(fp,-recsize,SEEk_CUR);
+
+
+==================C++======================
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int a,b,c;
+clrscr();
+cout<<"Enter two values:";
+cin>>a>>b;
+c=a+b;
+cout<<c;
+getch();
+
+}
+
+
+
+struct employee
+{
+int empno;
+float salary;
+}e;
+
+================Pointers===============
+A pointer is a variable that is capable holding the address of anoyher variable.
+
+void main()
+{
+int num;
+printf("Enter a number:");
+scanf("%d",&num);
+
+printf("Value of num=%d",num);
+printf("Address of num=%u",&num);
+getch();
+}
+
+=================================
+void main()
+{
+
+char c;
+int i;
+float f;
+printf("Enter an alphabet,number,float no");
+scanf("%c%d%f",&c,&i,&f);
+
+printf("Address of (c)%c=%u",c,&c);
+printf("Address of (i)%d=%u",i,&i);
+printf("Address of (f)%f=%u",f,&f);
+
+}
+
+============================
+
+void main()
+{
+int v=10,*p;
+p=&v;
+printf("Address of v=%d",p);
+printf("Value of v=%d",*p);
+printf("Address of p=%u",&p);
+getch();
+}
+
+================================
+void main()
+{
+int a,*pa;
+float b,*pb;
+
+printf("Enter an integer and float value:);
+scanf("%d%f",&a,&b);
+
+pa=&a;
+pb=&b;
+
+printf("Address of a=%u",pa);
+printf("Value of a=%d",a);
+printf("Value of a=%d",*(&a));
+printf("Value of a=%d",*pa);
+
+
+
+printf("Address of b=%u",pb);
+printf("Value of b=%f",b);
+printf("Value of a=%f",*(&b));
+printf("Value of a=%d",*pb);
+
+
+}
+
+========================
+void main()
+{
+int a,b,c,d,*ap,*bp;
+printf("Enter two numbers:");
+scanf("%d%d",&a,&b);//5 6.
+
+ap=&a;
+bp=&b;
+c=a+b;
+d=*ap+*bp
+printf("Sum of a and b using the variables:%d",c);
+printf("Sum of a and b using the pointers:%d",d);
+getch();
+}
+================================
+void main()
+{
+int a=25,b=10,*p,*j;
+p=&a;
+j=&b;
+printf("Addition a+b=%d",*p+b);//35
+printf(Subtraction a-b=%d",*p-b);15
+printf("Multiplication a*b=%d",(*p)*(*j));//250
+printf("Division a/b=%d",(*p)/(*j));//2
+getch();
+}
+
+====================================
+void main()
+{
+int a=2,*j,*k;
+j=&a;
+k=&a;
+if(j==k)
+printf("The two pointers have same address");
+else
+printf("The two pointers have  different addresses");
+
+printf("Address of a(j)=%u",j);
+printf("Address of a(k)=%u",k);
+getch();
+}
+=========================================
+/*Pointer to an array*/
+void main()
+{
+char name[15],*ch;
+printf("Enter your name:");
+gets(name);
+ch=name;
+while(*ch!='\0')
+{
+printf("%c",*ch);
+ch++;
+}
+getch();
+}
+=====================================
+void main()
+{
+int x,*x1;
+char y,*y1;
+float z,*z1;
+
+printf("Enter an integer,character,float value");//3 a 3.2
+scanf("%d%c%f",&x,&y,&z);
+
+x1=&x;
+y1=&y;
+z1=&z;
+
+printf("Address of x=%u\n",x1);
+printf("Address of y=%u\n",y1);
+printf("Address of z=%u\n",z1);
+
+x1++;
+y1++;
+z1++;
+
+
+
+printf("After incrementation");
+
+printf("Now x1=%u\n",x1);
+printf("Now y1=%u\n",y1);
+printf("Now z1=%u\n",z1);
+getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,631 @@
+                                    Introduction to Java
+
+1)What is a class?
+
+2)What is an object?
+
+3)What is the difference between a class and an object in terms of memory?
+Ans:A class is a logical entity but an object is a physical entity because an object 
+occupies space in the memory.
+
+4)JVM is platform dependent or independent?
+Ans:Platform depedent.
+
+5)Java is platform dependent or independent language?
+Ans:Platform indepedent.
+
+6)What are some features of java?
+
+7)No.of dot class files created per each class-one.
+
+8)Default value for int-0,char-space,string-null,boolean-false.
+
+9)By default,a class is having which scope?
+Ans:default scope
+
+10)No. of private classes in a program-0
+
+11)No. of public classes in a program-1
+
+12)No. of protected classes in a program-0
+
+13)No. of default classes in a program-any no.
+
+14)Java API consists of:
+Ans:JDK+JSL
+
+15)Process of java program execution?
+Ans: .java to .class and .class to .exe file.
+
+16)What is Typecasting?Types?
+Ans:promoting one datatype to other.Types are widening and narrowing
+
+17)Give some examples of java utilities?
+Ans:javac,java,javah,javap,etc.
+
+18)What do you mean by command line arguments?
+Ans:arguments or parameters given in the command of program execution(java classname 34 45 67)
+
+19)Why java is more oop than C++?
+Ans:Because,in java main is also written inside the class.
+
+20)Differences between C and Java?
+
+21)Differences between C++ and java?
+
+22)why java is slower than C?
+Ans:Because security checks are more in java.
+
+23)No.of Bytes-
+Ans:
+short-2
+byte-1
+char-2
+float-4
+int-4
+long-8
+double-8
+
+24)What are the regularly used class to accept the input from the user?
+Ans:Scanner,BufferedReader,DataInputStream,etc
+
+25)What is the super class of all the classes?
+Ans:object
+
+26)What is the default package in java?
+Ans:java.lang
+
+27)What are the to create an object?
+Ans:using new keyword,using deserialization,using object cloning,using reflection
+
+                                  Pillars of Java
+28)What is Encapsulation?
+
+29)Best example of encapsulation?
+Ans:class
+
+30)What is polymorphysm?
+
+31)What is inheritence?
+
+32)What is Abstraction?
+
+                                 Variables
+
+33)What is the difference between an instance variable,a static variable,a local variable.
+
+Ans:Only one copy of static variables is avaible to all the objects.For each object,separate
+copy of static variables is available.If a variable is recognized only in that block in 
+which it is defined,then it is called as a local variable.
+
+
+                                 Final Keyword
+34)A final variable can never be?
+Ans:changed
+
+35)A final method can never be?
+Ans:Overriden
+
+36)A final class can never be?
+Ans:inherited
+                                 Constructors
+
+37)What is the purpose of a consrtuctor?
+Ans:To initialize an object
+
+38)The name of the constuctor is equal to?
+Ans:classname
+
+39)What are the differences between a method and a constructor?
+Ans:Constructor-no return type,classname=constructor name
+
+40)What are the types of constructor?
+Ans:Parameterless and Parameterized.
+
+41)If you dont write a constructor in your program,what JVM will do?
+Ans:It will create a default constructor and uses it.
+
+42)When a constructor be called?
+Ans:AS soon as the object is created.
+
+                              Destructors
+
+43)What are Destructors in java?
+Ans:Used to deallocate the resources of an object.
+
+44)What is the method used which acts like destructors in java?
+Ans:finalize()
+
+45)When a destructor be executed on an object?
+Ans:When there are no references for an object.
+
+46)When a destructor be executed on an object?
+Ans:Just before the object is garbage collected,destructors are executed.
+
+47)Why destructors are not there in java?
+Ans:Because the Garbage collection is done by JVM itself.
+
+                            Garbage collection
+
+48)What is Garbage collection?
+
+49)Deallocating the memory of an object.
+
+50)Performance of a garbage collector will depend on?
+Ans:JVM performance.
+
+51)What is garbage collection pause?
+Ans:When garbage collection thread begins its execution,it stops all the apllication threads.After 
+performing garbage collection,again it starts all the application threads.This delay is called as
+Garbage Collection Pause.
+
+52)Types of garbage collectors
+Ans:Serial,parallel and concurrent
+
+53)Example of a serial and parallel gc?
+Serial-Hotspot,parallel-JRocket.
+
+54)To start gc process explicitly-
+Ans:System.gc()
+
+
+                           Dynamic method dispatch
+
+55)What is Dynamic method dispatch?
+Ans:Assigning a subclass object to a super class reference.
+
+56)What did the term Dynamic in java?
+Ans:At the time of execution.
+
+                            this and super keywords
+
+57)What is the purpose of this and super keywords?
+
+58)What are the restrictions on this and super keywords---
+Ans:super or this,if used, they should be the first statements in the constructor.
+They cannot be used in methods only in constructors.
+                            
+                             static
+
+59)What is the priority of the static block compared with main?
+Ans:static blocks will be executed before main.
+
+60)Limitation on static members.
+Ans:A static member can access only other static members
+Also they cannot use this and super 
+
+61)From where the memory is allocated for the static variables?
+Ans:From the static-pool.
+
+62)What is the advantage of declaring a method as static?
+Ans:We can directly access the members using the class name.
+
+                              Abstract class
+63)What is an abstract class?
+
+64)What is an abstract method?
+
+65)Can we create an object for an abstract class?
+Ans:No
+
+66)Can an abstract class contain abstract and non abstract methods?
+
+67)What are the differences between an abstract classes and interfaces?
+
+
+                               Interfaces
+
+68)What is an interface?
+
+69)Can an interface extend other interface?
+Ans:Yes
+
+70)Can an interface implement other interface?
+Ans:No
+
+71)Can you create an object directly for an interface?
+Ans:No,only references can be created.
+
+72)What is the access specifier for the variables in an interface?
+Ans:static and final
+
+73)What is the access specifier for the methods in an interface?
+Ans:public and abstract
+
+                             Polymorphysm
+
+74)What the types of polymorphysm?
+Ans:Method Overloading and Method Overriding.
+
+75)Differences between overloading and overriding
+  
+                               
+                            Inheritence
+
+76)What are the types of inheritences in java?
+
+77)Does java directly supports multiple inheritence?
+
+78)Java supports multiple inheritence through?
+Ans:Interfaces
+
+                            Exception handling
+79)What is an exception?
+
+80)What are the five keywords involved in exception handling?
+
+81)If you want some set of statements to be executed for sure,you have to place them in?
+Ans:finally block
+
+82)What are the types of exceptions?
+Ans:Checked and Unchecked.
+
+83)What is the super class of all exceptions
+Ans:Throwable
+
+84)You can through your own exception using?
+Ans:throw keyword 
+                             
+                         IO streams
+
+85)What is serialization?
+
+86)What is deserialization?                                                             
+
+87)What is a marker interface?
+
+88)What is the purpose of a transient keyword in java?
+
+                         Multi threading
+89)What is a thread?
+
+90)If you put t.run() instead of t.start(),what will hppen?
+Ans:Context-swithing will not be performed.
+
+91)If you start a thread for two times,what will happen?
+Ans:IllegalThreadStateException occurs.
+
+92)We can implement multithreading using?
+Ans:Thread class and Runnable interace
+
+93)What is the lifecycle of a tread?
+Ans:Newly born,runnable,running,dead.
+
+94)What is the difference between sleep() and wait()?
+Ans:In sleep(),we can specify the time upto which the thread should be inactive.But in wait()
+time is not specified.So,we dont know how much time the thread is inactive.
+
+95)Sleep() causes which exception?
+Ans:Interrupted Exception
+
+96)What are the methods present in Runnable interface?
+Ans : Only run()
+
+97)what is the normal priority of a thread?
+Ans : 5
+
+98)What is the method to determine whether a thread is alive or not ?
+Ans: t.isAlive()
+
+99)What is an orphan thread?
+Ans : A thread that doesn't have parent 
+
+100)What is the use of join() ? 
+
+101)What is the deamon thread ?
+
+102)What is the method used to make a thread as deamon ?
+Ans : t.setDeamon() 
+
+103)What is synchronization ?
+
+104)What is critical section ?
+Ans:That piece of code which is required to be executed by more than one thread.
+
+105)What is starvation ?
+Ans:A low priority thread is waiting for longer time to acquire the lock on the critical section.
+
+106)What is the difference between a synchronized block and synchronized method ?
+Ans : If we want to make whole method to be synchronized,then synchronized keyword is given for a 
+method.If we want only some statements of a method to be synchronized,then we use synchronized block.
+
+107)What are the types of locks?
+Ans : Class level , Object level
+
+108)If we want to acquire lock on whole class then for which method we have to give synchronized
+keyword?
+Ans:static method.
+
+109)What is inter-thread communication?
+
+110)What are the methods used for interthread communication ?
+Ans : wait(), notify(),notifyAll()
+111)In which class the methods for performing interthread communication present?
+Ans : Object
+
+                          Strings
+
+112)What is a string ?
+
+113)What is the use of StringTokenizer?
+Ans:It is like scanf statement in C language.Used to break up a string into tokens.
+
+114)Can you perform modifications on strings?
+
+115)What are the uses of StringBuilder and StringBuffer class ?
+
+116)What is the difference between StringBuilder and StringBuffer classes ?
+                        
+                        Collections
+
+117)What is a collection framework?
+
+118)Waht are the types of iterators?
+Ans:iterator,Listiterator,enumeration
+
+119)What are the differences between enumeration and iterator?
+
+120)What are the differences between Listiterator and iterator?
+
+                        JDBC
+121)What is the purpose ODBC driver ?
+
+122)What are the types of deivers and what are the advantages of them?
+
+123)Waht are the types of statements in JDBC?
+
+124)What is the use of callableStatement?
+
+125)What is the use of PreparedStatement?
+
+126)What is the method to get all the registered drivers?
+Ans : getDrivers()
+
+127)What are the three ways to register a driver?
+Ans:Class.forName(),System.setProperty("jdbc.drivers",drivername),DriverManager.registerDriver()
+
+128)Method use to de-register a driver?
+Ans: deregisterDriver()
+
+129)Why ODBC is rejected?
+
+
+
+
+==============C logics..............very important for interviews===============   
+
+www.programmingsimplified.com
+===swap two numbers using a temporary
+variable=====
+
+temp=x;
+x=y;
+y=temp;
+====swap two numbers without using 
+a temporary variable====
+
+a=a+b;
+b=a-b;
+a=a-b;
+
+===Febonicci series upto the given no==
+
+void main()
+{
+int t1=0,t2=1,disp=0,num;
+clrscr();
+printf("Enter a number:");
+scanf("%d",&num);
+
+printf("Feb series:%d%5d",t1,t2);
+disp=t1+t2;
+
+while(disp<=num)
+{
+printf("%5d",disp);
+t1=t2;
+t2=disp;
+disp=t1+t2;
+
+}
+getch();
+}
+
+=======Sum of the digits========
+void main()
+{
+int n,sum=0,rem,temp;
+printf("Enter a number:");
+scanf("%d",&n);
+
+temp=n;
+while(temp!=0)
+{
+rem=temp%10;
+sum=sum+rem;
+temp=temp/10;
+}
+printf("sum=%d",sum);
+getch();
+
+
+}
+======Amstrong number=======
+153
+void main()
+{
+int n,sum=0,rem,temp;
+printf("Enter a number:");
+scanf("%d",&n);
+
+temp=n;
+while(temp!=0)
+{
+rem=temp%10;
+sum=sum+rem*rem*rem;
+temp=temp/10;
+}
+if(sum==n)
+{
+printf("yes");
+}
+else
+{
+printf("no");
+}
+getch();
+}
+=====Perfect number=========
+6
+1,2,3,6
+void main()
+{
+int n,i=1,sum=0;
+printf("Enter a number:");
+scanf("%d",&n);
+
+while(i<n)
+{
+if(n%i==0)
+{
+sum=sum+i;
+}
+i++;
+}
+
+if(sum==n)
+{
+printf("Yes");
+}
+else
+{
+printf("No");
+}
+getch();
+}
+  
+=====Factorial===========
+5!
+5*4*3*2*1=120
+
+void main()
+{
+
+int c,fact=1,n=5;
+for(c=1;c<=n;c++)
+{
+fact=fact*c;
+}
+printf("%d",fact);
+getch();           
+}
+=======Prime===========
+void main()
+{
+int num,i;
+printf("Enter a number:");
+scanf("%d",&num);
+
+for(i=2;i<num;i++)
+{
+if(num%i==0)
+{
+printf("Not prime");
+goto out;
+}
+}
+printf("%d is prime",n);
+out:
+getch();
+}
+
+=======Program to reverse a no.===
+void main()
+{
+int a,sum=0,n;
+printf("Enter a number:");
+scanf("%d",&n);
+while(n>0)
+{
+sum=sum*10;
+a=n%10;
+n=n/10;
+sum=sum+a;
+}
+/*printf("Reverse=%d",sum);*/
+if(n==sum)
+{
+printf("Yes");
+}
+else
+{
+printf("No");
+}
+getch();
+}
+Let n=623
+sum   a    n    sum
+0     3    62    3  
+30    2     6    32
+320   6     0    326
+
+======To print prime nos. between 
+the given range=============
+void main()
+{
+int i,n,m,count;
+printf("Enter the range:");
+scanf("%d%d",&m,&n);
+
+for(i=m;i<=n;i++)
+{
+count=0;
+for(j=2;j<i;j++)
+{
+if(i%j==0)
+{
+count++;
+}
+if(count==0)
+{
+printf("%d",i);
+}
+}
+}
+getch();
+}
+============2D Array=======================
+======Matrix Addition==================
+void main()
+{
+int i,j,r1,c1,a[10][10],b[10][10];
+printf("Enter the order of the matrices upto 10*10");
+scanf("%d%d",&r1,&c1);
+
+printf("Enter the elements of the matrix A:");
+for(i=0;i<r1;i++)
+{
+   for(j=0;j<c1;j++)
+    {
+      scanf("%d",&a[i][j]);
+    }
+}
+printf("Enter the elements of the matrix B:");
+for(i=0;i<r1;i++)
+{
+   for(j=0;j<c1;j++)
+    {
+      scanf("%d",&b[i][j]);
+    }
+}
+printf("Matrix Addtion:");
+for(i=0;i<r1;i++)
+{
+   for(j=0;j<c1;j++)
+    {
+    printf("%5d",a[i][j]+b[i][j]);
+    }
+ printf("\n");
+}
+getch();
+}
